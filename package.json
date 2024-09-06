@@ -1,0 +1,28 @@
+{
+  "name": "esbuild-api-test",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node .build/build.mjs",
+    "watch": "node .build/watch.mjs",
+    "start": "node dist/index.js",
+    "dev": "conc \"npm:watch\" \"wait-on file:dist/index.js && npm run start:watch\"",
+    "start:watch": "node --watch dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.23.1",
+    "express": "^4.19.2",
+    "typescript": "^5.5.4",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "concurrently": "^8.2.2",
+    "wait-on": "^8.0.0"
+  }
+}
